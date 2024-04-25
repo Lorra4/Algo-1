@@ -1,0 +1,32 @@
+ALGORITHM count_characters
+Input: sentence (Laura n est pas folle, elle est juste très doué.)
+VAR
+    number_of_characters, number_of_vowel, number_of_words : INTEGER;
+    sentence: STRING;
+    i, j, k: INTEGER;
+BEGIN
+    Read (sentence)
+    FOR i FROM min TO sentence.length max STEP step  DO
+        IF (sentence[i]=='.') THEN
+            number_of_characters = number_of_characters+1
+        END_IF 
+        Write (number_of_characters)
+    END_FOR 
+       
+
+    FOR j FROM min TO sentence.length max STEP step  DO
+        IF (sentence[j]=='a, e, i, o, u') THEN
+            number_of_characters = number_of_characters+1
+        END_IF
+        Write (number_of_characters)
+    END_FOR   
+
+    FOR i FROM min TO sentence.length max STEP step  DO
+        IF (sentence[k]==' ' And sentence[k+1]=='') THEN
+            number_of_characters = number_of_characters+1 
+        END_IF
+        Write (number_of_characters)
+    END_FOR
+END
+
+
